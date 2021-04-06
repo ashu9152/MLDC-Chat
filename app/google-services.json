@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "420149063954",
+    "project_id": "mldc-chat",
+    "storage_bucket": "mldc-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420149063954:android:2e0c117ee80eb9316e83cb",
+        "android_client_info": {
+          "package_name": "com.example.mldcchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420149063954-ff3td9nhnie59tm1h4l6dn2t0vsrknl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ0AicoGnE1sJhq0EgVuDu64STf17mCt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420149063954-ff3td9nhnie59tm1h4l6dn2t0vsrknl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

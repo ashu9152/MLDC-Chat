@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MLDC Chat</string>
+    <string name="generate_otp">Generate OTP</string>
+    <string name="working">Working . . .</string>
+    <string name="your_phone_number">Your Phone Number</string>
+    <string name="_91">+91</string>
+    <string name="text_value">Please enter your Country Code \n and Phone number for verification</string>
+    <string name="verify_num">Verify Your Number</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="otp_send_text1">We have sent you an OTP \n for phone number verification</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="btn_verify_otp">Verify OTP</string>
+    <string name="otp_working">Working . . .</string>
+    <string name="error_message">Please fill in the Phone Number to continue.</string>
+    <string name="otp_error_message">Please enter OTP and try again</string>
+    <string name="phone_greater">Phone number only consist 10 numbers</string>
+    <string name="otp_error">There was error verifying OTP</string>
+    <string name="error_with_number">Verification Failed, Please try again</string>
+    <string name="entrance_text">Please enter your name</string>
+</resources>
