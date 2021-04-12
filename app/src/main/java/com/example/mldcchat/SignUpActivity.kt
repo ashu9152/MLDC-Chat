@@ -50,15 +50,14 @@ class SignUpActivity : AppCompatActivity() {
 
         btnNext.setOnClickListener {
             val textET = textEt.text.toString()
-            if (!:: downloadUrl.isInitialized){
+            if (!::downloadUrl.isInitialized) {
                 Toast.makeText(this, "Image cannot be empty", Toast.LENGTH_SHORT).show()
             }else if(textET.isEmpty()){
                 errortext.visibility = View.VISIBLE
             } else{
-                val user = User(textET,downloadUrl,auth.uid!!)
+                val user = User(textET, downloadUrl, auth.uid!!)
                 //this will create values in firestrore
                 database.collection("user").document(auth.uid!!).set(user).addOnSuccessListener {
-                    btnNext.isEnabled = false
                     startActivity(Intent(applicationContext, MainActivity::class.java))
                     finish()
                 }.addOnFailureListener {

@@ -2,26 +2,42 @@ package com.example.mldcchat
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import androidx.viewpager2.widget.ViewPager2
+import com.example.mldcchat.adapters.ViewPagerAdapter
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
      lateinit var mAuth: FirebaseAuth
-     lateinit var signoutbtn: Button
+    // lateinit var signoutbtn: Button
+     val pager by lazy {
+         findViewById<ViewPager2>(R.id.viewPager)
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var toolBar1: Toolbar
-        toolBar1 = findViewById(R.id.toolbar1)
-        setSupportActionBar(toolBar1)
+        setSupportActionBar(findViewById(R.id.toolbar))
+        pager.adapter = ViewPagerAdapter(this)
+        TabLayoutMediator(
+            findViewById<TabLayout>(R.id.tabs),
+            pager,
+            TabLayoutMediator.TabConfigurationStrategy { tab, pos ->
+                when (pos) {
+                    0 -> tab.text = "Chats"
+                    1 -> tab.text = "User"
+                }
+
+            }
+        ).attach()
+
 
           mAuth = FirebaseAuth.getInstance()
-         signoutbtn = findViewById(R.id.signOut)
+      //   signoutbtn = findViewById(R.id.signOut)
 
         var currentUser = mAuth.currentUser
         if(currentUser==null){
@@ -29,11 +45,11 @@ class MainActivity : AppCompatActivity() {
               finish()
         }
 
-         signoutbtn.setOnClickListener {
+       /*  signoutbtn.setOnClickListener {
             mAuth.signOut()
            startActivity(Intent(this, PhoneNumber::class.java))
              finish()
-       }
+       }  */
     }
 
 }
